@@ -19,7 +19,7 @@ public class Examples01 {
         mockedList.clear();
 
         // verification
-        verify(mockedList).add("one"); // mockedList.add("one")가 호출됬는지 체크.
+        verify(mockedList).add("two"); // mockedList.add("two")가 호출됬는지 체크.
         verify(mockedList).clear(); // mockedList.clear();가 호출됬는지 체크
     }
 }
