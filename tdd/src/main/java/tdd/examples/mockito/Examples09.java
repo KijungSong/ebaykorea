@@ -20,10 +20,10 @@ public class Examples09 {
     @Test
     public void test1() {
 // chaining
-        when(mock.someMethod(anyString()))
-                .thenReturn("foo")
-                .thenReturn("bar")
-                .thenThrow(new RuntimeException());
+        when(mock.someMethod(anyString())) // someMethod에 아무 문자열을 인자로 넣어서 호출 하면
+                .thenReturn("foo") // 처음 호출은 return "foo"
+                .thenReturn("bar") // 그 다음 호출은 return "foo"
+                .thenThrow(new RuntimeException()); // 그 다음 호출은 예외 발생.
 
         System.out.println(mock.someMethod("some arg")); // foo
         System.out.println(mock.someMethod("some arg")); // bar
@@ -33,8 +33,8 @@ public class Examples09 {
     @Test
     public void test2() {
 // multi arguments
-        when(mock.someMethod(anyString()))
-                .thenReturn("one", "two");
+        when(mock.someMethod(anyString())) // someMethod에 아무 문자열을 인자로 넣어서 호출 하면
+                .thenReturn("one", "two"); // 처음 리턴은 "one", 그 이후 리턴은 "two"
 
         System.out.println(mock.someMethod("some arg")); // one
         System.out.println(mock.someMethod("some arg")); // two
