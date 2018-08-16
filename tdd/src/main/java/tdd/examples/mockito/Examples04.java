@@ -14,8 +14,8 @@ public class Examples04 {
         mockedList.add("twice");
         mockedList.add("twice");
 
-//        mockedList.add("five times");
-//        mockedList.add("five times");
+        mockedList.add("five times");
+        mockedList.add("five times");
 
         mockedList.add("three times");
         mockedList.add("three times");
@@ -24,10 +24,10 @@ public class Examples04 {
 //        mockedList.add("three times");
 
         verify(mockedList).add("once"); // times(1) 기본값
-        verify(mockedList, times(1)).add("once");
+        verify(mockedList, times(1)).add("once"); // mockedList.add("once"); 한번 호출
 
-        verify(mockedList, times(2)).add("twice");
-        verify(mockedList, times(3)).add("three times");
+        verify(mockedList, times(2)).add("twice");  // mockedList.add("twice"); 두번 호출
+        verify(mockedList, times(3)).add("three times"); // mockedList.add("three times"); 세번 호출
 
         verify(mockedList, never()).add("never happened"); // 호출된 적 없음
 
