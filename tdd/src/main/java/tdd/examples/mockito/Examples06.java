@@ -22,7 +22,7 @@ public class Examples06 {
         singleMock.add("first");
         singleMock.add("second");
 
-        InOrder inOrder = inOrder(singleMock);
+        InOrder inOrder = inOrder(singleMock); // inOrder를 통해 어느 순서로 메서드를 호출했는지 체크할 수 있음.
 
         inOrder.verify(singleMock).add("first");
         inOrder.verify(singleMock).add("second");

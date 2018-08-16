@@ -15,6 +15,9 @@ import java.util.List;
 이때까지의 예제에서는 stub 할 때 모두 특정값을 넣었다.
 만약 mock의 상태나 메소드 인자값에 따라 다른 값을 돌려주게 하게 만들고 싶다면 어떻게 해야할까.
 Answer<?> 클래스를 사용하면 가능하다.
+
+람다표현식: Answer는 메소드가 1개다. 메소드가 한개인 인터페이스를 함수형인터페이스라고한다.
+함수형 인터페이스를 사용하는 익명 객체는 람다표현식으로 바꿀 수 있다.
  */
 @RunWith(MockitoJUnitRunner.class)
 public class Examples10 {
