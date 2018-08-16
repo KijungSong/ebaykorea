@@ -9,7 +9,7 @@ public class Examples05 {
     public static void main(String[] args) {
         LinkedList mockedList = mock(LinkedList.class);
 
-        doThrow(new RuntimeException()).when(mockedList).clear();
+        doThrow(new RuntimeException()).when(mockedList).clear(); // mockedList.clear() 호출될때 RuntimeException 예외 throw
 
         mockedList.clear(); // RuntimeException
     }
