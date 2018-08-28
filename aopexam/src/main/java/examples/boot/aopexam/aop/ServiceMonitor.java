@@ -24,7 +24,7 @@ public class ServiceMonitor {
     }
 
     @AfterThrowing(value = "execution(* examples..*Service.*(..))", throwing = "ex")
-    public void afterException(JoinPoint joinPoint, Exception ex) {
+    public void afterException(JoinPoint joinPoint, Exception ex) { // 발생한 exception을 받음 사용할때 애노테이션에 throwing을 같이 설정해줘야 한다.
         System.out.println("exception :" + joinPoint);
         System.out.println(ex.getMessage());
     }
